@@ -1,0 +1,57 @@
+<div class="panel panel-default">
+    <div class="panel-heading " align="center" >
+      <h2>Top rated Freelancers</h2><br> 
+    </div>
+  
+    <!--Results container-->
+    <div class="container">
+    
+    <!--Loop-->
+            <div *ngFor="let person of list;">
+    
+    <!--card view-->
+                <div class="card"  >
+    
+    
+    <!--image container-->
+                    <div class="col-md-3"  >
+                        <hr>
+                        <img  class="image" src="{{person.ImageURL}}">
+                    </div>
+                    <hr>
+    
+    
+     <!--details container-->
+                    <div class="col-md-8"  >
+                        
+                     
+                    <div><h4>Name:<span>&nbsp;{{person.FreelancerName}}</span></h4></div>
+                    <div><h4>Address:<span>&nbsp;{{person.FreelancerAddress}}</span></h4></div> 
+                    <div><h4>Phone:<span>&nbsp;{{person.FreelancerPhone}}</span></h4></div> 
+                    <div><h4>Description:<span>&nbsp;{{person.FreelancerDescription}}</span></h4></div> 
+                    <div><h4>Experience:<span>&nbsp;{{person.FreelancerRegDate}}</span></h4></div>
+                    <div><h4>Session Price:<span class="price">&nbsp;${{person.FreelancerSessionPrice}}</span></h4></div>
+                    <div><bar-rating [(rate)]="rate" [max]="5"></bar-rating></div>
+                    <button (click)="toProfile(person.FreelancerId)" type="button" class="btn btn-primary btn-md">View Profile</button>                             
+                    </div>
+                                          
+                                                             
+                                                            
+                </div>
+    <!--End card-->
+                
+            <hr>
+            <hr>
+    
+            </div>
+    <!--End loop-->
+      
+    </div> 
+
+   
+    
+    
+
+
+  
+</div>

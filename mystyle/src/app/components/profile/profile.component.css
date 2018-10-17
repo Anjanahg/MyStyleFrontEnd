@@ -1,0 +1,38 @@
+.card{
+    background-color:rgba(241, 253, 255, 0.904);
+    height: 95%;
+    width : 98%;
+    border-radius: 5px;
+}
+
+.container{
+    height: 100%;
+    width:10cm;
+    margin-left: 0cm;
+
+    background-color:rgb(226,226,226)
+}
+
+
+.image{
+    height:6cm;
+    width:6cm;
+    border-radius: 5%;
+   align-content: center;
+   margin-left: 1cm;
+}
+
+.details{
+    margin-top: 8cm;
+    margin-left: .5cm;
+}
+.price{
+    color: rgb(199, 62, 62)
+}
+.title{
+    text-align: center
+}
+.col-md-6{
+    border-left: 2px;
+    border-color: black
+}

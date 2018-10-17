@@ -1,0 +1,66 @@
+.card{
+    background-color: rgb(226, 226, 226);
+    height: 9cm;
+    width : 100%;
+    border-radius: 25px;
+}
+
+
+
+.left{
+    left:0;
+}
+
+.right{
+    right:0;
+}
+
+.image{
+    height:6cm;
+    width:6cm;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.col-md-3{
+    left:0;
+}
+.col-md-8{
+    background-color:rgba(241, 253, 255, 0.904);
+    margin-left:1cm;
+    height:7cm;
+    margin-top: .5cm;
+    border-radius: 1%;
+}
+.price{
+    color: rgb(199, 62, 62)
+}
+
+.d{
+    width: 4.5cm;
+    align-content: center
+}
+.s{
+    width: 4.5cm;
+    align-content: center
+}
+.l{
+   align-self: center
+}
+.btn{
+    align-content: center;
+    width: 4cm;
+    background-color:#15949A;
+   
+}
+.col-md-12{
+    margin-top: 10%;
+    align-content: center
+  
+}
+.btn{
+    margin-left: 12cm;
+    margin-top: -2cm;
+}
+
+

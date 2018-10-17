@@ -1,0 +1,124 @@
+
+
+<!--header-->
+<app-header></app-header>
+
+<div class="container">
+
+<!--card view-->
+        <div class="card"  >
+            <hr>   
+
+<!--Panel heading-->                          
+                <div class="panel-heading " align="center" >
+                <h2>Search Hairstylists here.</h2>
+                <hr>
+                </div>
+
+
+<!--Date picker-->
+                <div class="col-md-3" align="center">
+                <label class="l">Select the date here</label><br>
+                        <input type="date" (ngModelChange)="dt = $event" (input)="selectedDate = $event.target.valueAsDate" class="d"/>
+                </div>
+
+
+
+<!--Session picker-->
+                <div class="col-md-3" >
+                    <div class="r">
+                        <label class="l">Select the Session</label><br>
+                                <input type="radio" [(ngModel)]="selectedSession" value="0"> Any<br>
+                                <input type="radio" [(ngModel)]="selectedSession" value="1"> 8.00 a.m. - 12 noon<br>
+                                <input type="radio" [(ngModel)]="selectedSession" value="2"> 1.00 a.m. - 5.00 p.m.<br>
+                        </div>
+                </div>
+
+
+
+<!--Skill picker-->
+        <div class="col-md-3">
+             <label class="l">Select the Skill</label><br>
+                    <select  [(ngModel)]="selectedSkill" *ngIf="skillList" class="s">
+                        <option [ngValue] = "skill.SkillId"  *ngFor="let skill of skillList" >{{skill.SkillName}}</option>
+                                                      
+                    </select>
+        </div>
+
+
+
+
+
+<!--City picker-->
+        <div class="col-md-3">
+               
+            <label class="l" >Select the City</label><br>
+             <select  [(ngModel)]="selectedCity" *ngIf="cityList" class="s"    >
+                    <option [ngValue] = "city.CityId" *ngFor="let city of cityList"  >{{city.CityName}}</option>
+                </select>
+              
+        </div>
+
+<!--Search botton-->                      
+                       
+          <div class="col-md-12" >
+                <button (click)="search()" class="btn btn-primary">Search</button>
+             
+          </div>                                    
+                                                                 
+                                                                
+        </div>
+        <!--End card-->
+                    
+                <hr>
+                <hr>
+        
+         
+          
+  </div> 
+
+
+
+
+<!--Results container-->
+<div class="container">
+
+<!--Loop-->
+        <div *ngFor="let person of list;">
+
+<!--card view-->
+            <div class="card" >
+
+
+<!--image container-->
+                <div class="col-md-3"  >
+                    <hr>
+                    <img  class="image" src="{{person.ImageURL}}">
+                </div>
+                <hr>
+
+
+ <!--details container-->
+                <div class="col-md-8"  >
+                        
+                <div><h4>Name:<span>&nbsp;{{person.FreelancerName}}</span></h4></div>
+                <div><h4>Address:<span>&nbsp;{{person.FreelancerAddress}}</span></h4></div> 
+                <div><h4>Phone:<span>&nbsp;{{person.FreelancerPhone}}</span></h4></div> 
+                <div><h4>Description:<span>&nbsp;{{person.FreelancerDescription}}</span></h4></div> 
+                <div><h4>Experience:<span>&nbsp;{{person.FreelancerRegDate}}</span></h4></div>
+                <div><h4>Session Price:<span class="price">&nbsp;${{person.FreelancerSessionPrice}}</span></h4></div>
+                <button (click)="toProfile(person.FreelancerId)" type="button" class="btn btn-primary btn-md">View Profile</button>                             
+                </div>
+                                      
+                                                         
+                                                        
+            </div>
+<!--End card-->
+            
+        <hr>
+        <hr>
+
+        </div>
+<!--End loop-->
+  
+</div> 

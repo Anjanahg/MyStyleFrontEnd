@@ -1,0 +1,41 @@
+.container{
+    background:#868887;
+    width:100%;
+}
+.white-text{
+    color: white;
+}
+.text-uppercase font-weight-bold{
+    color: black
+}
+.page-footer{
+    margin-top: 80px;
+}
+.fa {
+    padding: 5px;
+    font-size: 15px;
+    width: 30px;
+    text-align:center;
+    text-decoration: none;
+    height: 0.7cm;
+    border-radius: 10px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-youtube {
+    background: red;
+    color: white;
+    
+}
